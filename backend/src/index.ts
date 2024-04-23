@@ -6,10 +6,10 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.get("/test", async (req:Request, res:Result) => {
-    res.json({message:"test message"})
+app.get("/test",async(req,res)=>{
+    res.json({message:"Hello world"})
 })
 
-app.listen(7000,()=>{
-    console.log("server started at localhost:7000");
+app.listen(8000,()=>{
+    console.log("listening at port 8000...")
 })
