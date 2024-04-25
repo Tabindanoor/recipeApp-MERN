@@ -1,4 +1,4 @@
-import React from 'react'
+import { AppState, Auth0Provider, User } from '@auth0/auth0-react';
 
 
 type Props={
@@ -11,13 +11,27 @@ const Auth0ProviderWithNavigate = ({children}:Props) => {
     const clientID = import.meta.env.VITE_AUTH0_CLIENT_ID;
     const redirectUri = import.meta.env.VITE_AUTH0_CALLBACK_URL;
 
-    if(!redirectUri || !redirectUri || !redirectUri)
+    if(!domain || !clientID || !redirectUri)
         throw new Error(`unable to iniatialise a redirect to auth`)
 
+
+    const onRedirectCallback=(appState?:AppState, user?:User)=>{
+        console.log("user", user)
+    }
+
   return (
-    <div>
-      
-    </div>
+   <Auth0Provider
+
+   domain={domain}
+   clientId={clientID}
+    authorizationParams={{
+     redirect_uri:redirectUri
+    }}
+
+    onRedirectCallback ={onRedirectCallback}
+        >
+        {children}
+   </Auth0Provider>
   )
 }
 

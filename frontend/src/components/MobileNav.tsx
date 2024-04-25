@@ -1,9 +1,12 @@
 import React from 'react'
 import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from './ui/sheet'
-import { Menu } from 'lucide-react'
+import { CircleUserRound, Menu } from 'lucide-react'
 import { Separator } from './ui/separator'
 import { Button } from './ui/button'
+import { useAuth0 } from '@auth0/auth0-react'
+import MobileNavLinks from './MobileNavLinks'
 const MobileNav = () => {
+    const {loginWithRedirect, isAuthenticated,user} = useAuth0();
   return (
     <Sheet>
         <SheetTrigger>
@@ -12,17 +15,28 @@ const MobileNav = () => {
 
         <SheetContent className='space-y-3'>
             <SheetTitle>
-                <span>Welcome to MERN Eats..!</span>
+                
+                {isAuthenticated? 
+                <span className='flex items-center font-bold gap-2'>
+                    <CircleUserRound className='text-orange-500'/>
+                    {user?.email}
+                </span>:  
+               <span>Welcome to MERN Eats..!</span> 
+                }
+
             </SheetTitle>
+               <Separator />
 
-            <Separator />
+            <SheetDescription className='flex flex-col gap-4'>
 
-            <SheetDescription className='flex'>
-                <Button title="btn" className='flex-1 font-bold bg-orange-500'>
+                    {isAuthenticated ? <MobileNavLinks/> : <Button title="btn"
+                 className='flex-1  font-bold bg-orange-500'
+                 onClick={async()=>await loginWithRedirect()}>
                     Log In 
-                </Button>
-            </SheetDescription>
+                </Button>}
 
+               
+            </SheetDescription>
         </SheetContent>
 
     </Sheet>
