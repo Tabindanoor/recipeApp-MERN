@@ -18,6 +18,6 @@ app.use(cors())
 
 app.use("/api/my/user",myUserRoutes)
 
-app.listen(8000,()=>{
-    console.log("listening at port 8000...")
+app.listen(7000,()=>{
+    console.log("listening at port 7000...")
 })
