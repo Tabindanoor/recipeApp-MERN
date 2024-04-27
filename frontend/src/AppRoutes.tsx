@@ -7,8 +7,7 @@ const AppRoutes = () => {
   return (
     <Routes>
         <Route path='/'  element={<Layout><HomePage/></Layout> }/>
-        <Route path='/        <Route path='/user-profile'  element={<span>User Page</span>} />
-'  element={<AuthCallbackPage/>} />
+        <Route path='/auth-callback'  element={<AuthCallbackPage/>} />
         <Route path='/user-profile'  element={<span>User Page</span>} />
         <Route path='*'  element={<span> Page</span>} />
     </Routes>
