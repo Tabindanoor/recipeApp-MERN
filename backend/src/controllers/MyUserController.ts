@@ -25,6 +25,34 @@ const createCurrentUser=async(req:Request, res:Response)=>{
     res.status(res.statusCode).json({message:"Error creating current User"})
         }
 
+        const updateCurrentUser=async(req:Request, res:Response)=>{
+            try {
+
+            const {name, addressLine1, country, city} = req.body;
+            const user= await User.findById(req.userId)
+                
+            if(!user){
+                                return res.status(404).json({message:'User not found'})
+
+            }
+
+            user.name = name;
+            user.addressLine1 = addressLine1;
+            user.city = city;
+            user.country =  country;
+
+            await user.save();
+            res.send(user)
+            } 
+
+            catch (error) {
+              console.log(error)  
+              res.status(res.statusCode).json({message:"Error updating current User"})
+            }
+        }
+
+         
+
 }
 
 
