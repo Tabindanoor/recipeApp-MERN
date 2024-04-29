@@ -12,12 +12,21 @@ declare global {
     }
   }
 }
+
+// these are the middleware functions
+
+
+// we get these packages from the auth0 package.
+//  We use this to verify that a token is valid
+//  and that the token is not expired and that the token 
+// and make sure that it comes from the auth0 package
 export const jwtCheck = auth({
     audience: process.env.AUTH0_AUDIENCE,
     issuerBaseURL: process.env.AUTH0_ISSUER_BASE_URL,
     tokenSigningAlg: 'RS256'
   }); 
 
+  // it will take the token and get information out of it 
 
   export const jwtParse = async (
     req: Request,
