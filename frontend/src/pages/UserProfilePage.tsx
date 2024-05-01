@@ -5,6 +5,7 @@ const UserProfilePage = () => {
   return (
     <div>
         <UserProfileForm/>
+        <UserProfileForm/>
     </div>
   )
 }
