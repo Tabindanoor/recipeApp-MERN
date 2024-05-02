@@ -4,8 +4,7 @@ import React from 'react'
 const UserProfilePage = () => {
   return (
     <div>
-        <UserProfileForm/>
-        <UserProfileForm/>
+        {/* <UserProfileForm/> */}
     </div>
   )
 }
