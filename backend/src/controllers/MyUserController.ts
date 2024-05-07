@@ -8,23 +8,23 @@ const createCurrentUser=async(req:Request, res:Response)=>{
 
 
     try {
-
         const {auth0Id} = req.body 
         const existingUser = await User.findOne({auth0Id})
-        if(existingUser)
-            {
+        if(existingUser) {
             return res.send(200).send()
-            }
+        }
 
         const newUser = new User(req.body)
         await newUser.save()
-        res.status(200).send(newUser.toObject())
+        res.status(201).json(newUser.toObject());
 
-    } catch (error) {
+    } 
+    
+    catch (error) {
     console.log(error)
-    res.status(res.statusCode).json({message:"Error creating current User"})
-        }
-    }
+    res.status(500).json({message:"Error creating current User"})
+     }
+ }
 
 
 const updateCurrentUser=async(req:Request, res:Response)=>{

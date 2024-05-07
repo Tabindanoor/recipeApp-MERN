@@ -14,7 +14,7 @@ const MobileNavLinks = () => {
       </Link>
 
         <Button
-        onClick={async()=>await logout()}
+        onClick={()=>logout()}
         className=" flex w-full items-center px-3 mt-4 text-center hover:bg-gray-500">
             Log Out 
         </Button>

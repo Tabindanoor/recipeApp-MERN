@@ -33,7 +33,7 @@ const MobileNav = () => {
                          <MobileNavLinks/>
                         ) :(
                          <Button title="btn"  className='flex-1  font-bold bg-orange-500'
-                 onClick={async()=>await loginWithRedirect()}>
+                 onClick={()=>loginWithRedirect()}>
                     Log In 
                 </Button>)}
 

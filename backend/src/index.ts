@@ -2,9 +2,11 @@ import express from "express"
 import cors from "cors"
 import "dotenv/config"
 import mongoose from "mongoose"
-import myUserRoutes from "./routes/MyUserRoutes"
-mongoose.connect(process.env.DATABASE_STRING as string).then(()=>{
-console.log("Connected to the database")
+import myUserRoute from "./routes/MyUserRoute"
+
+mongoose
+        .connect(process.env.DATABASE_STRING as string)
+        .then(()=>{console.log("Connected to the database!")
 })
 
 const app = express()
@@ -16,7 +18,7 @@ app.use(cors())
 // })
 
 
-app.use("/api/my/user",myUserRoutes)
+app.use("/api/my/user",myUserRoute)
 
 app.listen(7000,()=>{
     console.log("listening at port 7000...")
