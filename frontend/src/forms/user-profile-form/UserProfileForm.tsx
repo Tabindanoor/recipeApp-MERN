@@ -63,7 +63,7 @@ const formSchema = z.object({
                 <Input {...field} disabled className="bg-white" />
               </FormControl>
             </FormItem>
-          )}
+          )} 
         />
 
         <FormField
@@ -125,7 +125,7 @@ const formSchema = z.object({
           <LoadingButton />
         ) : (
           <Button type="submit" className="bg-orange-500">
-            {buttonText}
+            Submit
           </Button>
         )}
       </form>

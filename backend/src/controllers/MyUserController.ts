@@ -34,7 +34,7 @@ const updateCurrentUser=async(req:Request, res:Response)=>{
     const user= await User.findById(req.userId)
         
     if(!user){
-                        return res.status(404).json({message:'User not found'})
+    return res.status(404).json({message:'User not found'})
 
     }
 
