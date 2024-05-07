@@ -29,11 +29,13 @@ const MobileNav = () => {
 
             <SheetDescription className='flex flex-col gap-4'>
 
-                    {isAuthenticated ? <MobileNavLinks/> : <Button title="btn"
-                 className='flex-1  font-bold bg-orange-500'
+                    {isAuthenticated ? (
+                         <MobileNavLinks/>
+                        ) :(
+                         <Button title="btn"  className='flex-1  font-bold bg-orange-500'
                  onClick={async()=>await loginWithRedirect()}>
                     Log In 
-                </Button>}
+                </Button>)}
 
                
             </SheetDescription>

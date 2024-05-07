@@ -19,12 +19,18 @@ const UsernameMenu = () => {
             </DropdownMenuTrigger>
 
             <DropdownMenuContent className="">
+                <DropdownMenuItem>
+
+                
                 <Link to="/user-profile"
                 className="font-bold hover:text-orange-500 ">
                     User Profile
                 </Link>   
+                </DropdownMenuItem>
+                
                 <Separator/>
                 <DropdownMenuItem>
+               
                     <Button type="button"
                     className='flex flex-1 font-bold bg-orange-500 '
                     onClick={async()=>await logout()}>
