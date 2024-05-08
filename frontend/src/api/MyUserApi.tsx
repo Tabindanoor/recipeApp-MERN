@@ -56,7 +56,7 @@ type UpdateMyUserRequest ={
 export const useUpdateMyUser=()=>{
 
     const {getAccessTokenSilently} = useAuth0();
-    const updateMyUserRequest = async (FormData:UpdateMyUserRequest)=>{
+    const updateMyUserRequest = async (formData:UpdateMyUserRequest)=>{
 
 
         const accessToken = await getAccessTokenSilently(); 
@@ -66,11 +66,12 @@ export const useUpdateMyUser=()=>{
             headers:{
                 Authorization: `Bearer ${accessToken}`,
                 "Content-Type": "application/json" 
-            },body: JSON.stringify(FormData)
+            },
+            body: JSON.stringify(formData)
         })
 
           if(!response.ok){
-            throw new Error('Failed to create user')
+            throw new Error('Failed to update user')
 
     }
     
@@ -84,7 +85,7 @@ export const useUpdateMyUser=()=>{
         isError,
         error, 
         reset
-        
+
         } = useMutation(updateMyUserRequest)
 
 

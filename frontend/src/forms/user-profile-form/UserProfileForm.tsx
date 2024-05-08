@@ -46,7 +46,7 @@ const formSchema = z.object({
         className="space-y-4 bg-gray-50 rounded-lg md:p-10"
       >
         <div>
-          <h2 className="text-2xl font-bold">{title}</h2>
+          <h2 className="text-2xl font-bold">{title} User Profile Form </h2>
           <FormDescription>
             View and change your profile information here
           </FormDescription>

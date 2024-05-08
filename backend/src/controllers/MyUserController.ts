@@ -29,13 +29,12 @@ const createCurrentUser=async(req:Request, res:Response)=>{
 
 const updateCurrentUser=async(req:Request, res:Response)=>{
     try {
-
-    const {name, addressLine1, country, city} = req.body;
-    const user= await User.findById(req.userId)
+        
+        const {name, addressLine1, country, city} = req.body;
+        const user= await User.findById(req.userId)
         
     if(!user){
-    return res.status(404).json({message:'User not found'})
-
+        return res.status(404).json({message:'User not found'})
     }
 
     user.name = name;
@@ -49,7 +48,8 @@ const updateCurrentUser=async(req:Request, res:Response)=>{
 
     catch (error) {
       console.log(error)  
-      res.status(res.statusCode).json({message:"Error updating current User"})
+      res.status(500).json({message:"Error updating User"})
+    //   res.status(res.statusCode).json({message:"Error updating current User"})
     }
 }
 

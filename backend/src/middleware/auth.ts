@@ -15,7 +15,7 @@ declare global {
   namespace Express{
     interface Request{
       userId:string;
-      auth0Id:string
+      auth0Id:string;
     }
   }
 }
@@ -41,7 +41,7 @@ export const jwtCheck = auth({
     next: NextFunction
   ) => {
     const { authorization } = req.headers;
-
+    // Bearer hwfiwfuwbfugufuhsufhuwfuadwf
     if (!authorization || !authorization.startsWith("Bearer ")) {
         return res.sendStatus(401);
       }
