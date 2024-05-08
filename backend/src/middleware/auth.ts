@@ -4,6 +4,13 @@ import jwt  from "jsonwebtoken";
 import User from "../models/user";
 
 
+
+// const jwtCheck = auth({
+//   audience: 'mern-food-ordering-app-api',
+//   issuerBaseURL: 'https://dev-0dzj2k2k5x20yucf.us.auth0.com/',
+//   tokenSigningAlg: 'RS256'
+// });
+
 declare global {
   namespace Express{
     interface Request{
