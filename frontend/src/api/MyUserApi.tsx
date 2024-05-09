@@ -19,18 +19,17 @@ export const useGetMyUser=()=>{
             method: 'GET',
             headers:{
                 Authorization: `Bearer ${accessToken}`,
-                "Content-Type": "application/json" }
-                ,
-                // body: JSON.stringify(user)
-        })
+                "Content-Type": "application/json" 
+            }
+        });
 
         if(!response.ok){
-            throw new Error('Failed to fetch user')
+            throw new Error('Failed to fetch user');
         }
 
         
         return response.json()
-    }  
+    } ;
     
     const {
         data: currentUser, 
@@ -46,7 +45,7 @@ export const useGetMyUser=()=>{
 
        return{ currentUser, isLoading}
 
-    }
+    };
 
 
 

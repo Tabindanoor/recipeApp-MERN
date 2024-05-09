@@ -4,8 +4,10 @@ import User from '../models/user';
 
 
 const getCurrentUser = async (req: Request, res:Response)=>{
+    
     try{
-        const currentUser = await User.findOne({_id:req.userId});
+        const currentUser = await User.findOne({ _id:req.userId });
+        console.log("currentUser", currentUser)
         if(!currentUser){
             return res.status(404).json({message:"User not found"})
         }
@@ -46,11 +48,15 @@ const createCurrentUser=async(req:Request, res:Response)=>{
  }
 
 
-const updateCurrentUser=async(req:Request, res:Response)=>{
+const updateCurrentUser=async(req:Request, res:Response)=> {
     try {
+        
+
         
         const {name, addressLine1, country, city} = req.body;
         const user= await User.findById(req.userId)
+        
+
         
     if(!user){
         return res.status(404).json({message:'User not found'})

@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import LoadingButton from "@/components/LoadingButton";
 import { Button } from "@/components/ui/button";
 import { User } from "@/types";
+import { useEffect } from "react";
 
 const formSchema = z.object({
     email: z.string().optional(),
@@ -32,23 +33,28 @@ const formSchema = z.object({
 
  
 
-  const UserProfileForm = ({currentUser, isLoading, onSave,buttonText,title}:Props) => {
+  const UserProfileForm = ({onSave, isLoading, currentUser}:Props) => {
     
     const form = useForm<UserFormData>   ({
         resolver:zodResolver(formSchema),
         defaultValues:currentUser,
-    }) 
+    });
+
+
+    useEffect(() => {      
+      form.reset(currentUser);
+    }, [currentUser, form])
+
+    
 
     return (
-      <>
-        
-        <Form {...form}>
+    <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSave)}
         className="space-y-4 bg-gray-50 rounded-lg md:p-10"
       >
         <div>
-          <h2 className="text-2xl font-bold">{title} User Profile Form </h2>
+          <h2 className="text-2xl font-bold">User Profile Form </h2>
           <FormDescription>
             View and change your profile information here
           </FormDescription>
@@ -132,8 +138,6 @@ const formSchema = z.object({
         )}
       </form>
     </Form>
-
-      </>
     )
   }
   

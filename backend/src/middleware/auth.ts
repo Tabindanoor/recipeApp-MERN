@@ -4,13 +4,6 @@ import jwt  from "jsonwebtoken";
 import User from "../models/user";
 
 
-
-// const jwtCheck = auth({
-//   audience: 'mern-food-ordering-app-api',
-//   issuerBaseURL: 'https://dev-0dzj2k2k5x20yucf.us.auth0.com/',
-//   tokenSigningAlg: 'RS256'
-// });
-
 declare global {
   namespace Express{
     interface Request{
@@ -35,33 +28,77 @@ export const jwtCheck = auth({
 
   // it will take the token and get information out of it 
 
+  // export const jwtParse = async (
+  //   req: Request,
+  //   res: Response,
+  //   next: NextFunction
+  // ) => {
+  //   const { authorization } = req.headers;
+  //   // Bearer hwfiwfuwbfugufuhsufhuwfuadwf
+  //   if (!authorization || !authorization.startsWith("Bearer ")) {
+  //       return res.sendStatus(401);
+  //     }
+
+  //     const token = authorization.split(" ")[1]
+  //     try {
+  //       const decoded = jwt.decode(token) as jwt.JwtPayload;
+  //       const auth0Id = decoded.sub;
+    
+  //       const user = await User.findOne({ auth0Id });
+    
+  //       if (!user) {
+  //         return res.sendStatus(401);
+  //       }
+    
+  //       req.auth0Id = auth0Id as string;
+       
+  //       // req.userId = user._id.toString(); 
+        
+  //       req.userId = user._id.toString();
+  //       console.log(req.userId , "user id is here babes")
+      
+  //       next();
+  //     } catch (error) {
+  //       return res.sendStatus(401);
+  //     }
+  // }
+
+
   export const jwtParse = async (
     req: Request,
     res: Response,
     next: NextFunction
   ) => {
     const { authorization } = req.headers;
-    // Bearer hwfiwfuwbfugufuhsufhuwfuadwf
     if (!authorization || !authorization.startsWith("Bearer ")) {
+      return res.sendStatus(401);
+    }
+  
+    const token = authorization.split(" ")[1];
+    try {
+      const decoded = jwt.decode(token) as jwt.JwtPayload;
+      const auth0Id = decoded.sub;
+  
+      const user = await User.findOne({ auth0Id });
+  
+      if (!user) {
         return res.sendStatus(401);
       }
+  
+      if (!user._id) {
+        return res.sendStatus(401);
+      }
+  
 
-      const token = authorization.split(" ")[1]
-      try {
-        const decoded = jwt.decode(token) as jwt.JwtPayload;
-        const auth0Id = decoded.sub;
-    
-        const user = await User.findOne({ auth0Id });
-    
-        if (!user) {
-          return res.sendStatus(401);
-        }
-    
-        req.auth0Id = auth0Id as string;
-        req.userId = user._id.toString();
-        next();
-      } catch (error) {
-        return res.sendStatus(401);
-      }
-  }
+      req.auth0Id = auth0Id as string;
+      req.userId = user._id.toString();
+      console.log(req.userId, "user id is here");
+  
+      next();
+    } catch (error) {
+      console.error(error);
+      return res.sendStatus(401);
+    }
+  };
+  
   
