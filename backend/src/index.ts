@@ -3,6 +3,7 @@ import cors from "cors"
 import "dotenv/config"
 import mongoose from "mongoose"
 import myUserRoute from "./routes/MyUserRoute"
+import { Request, Response } from "express"
 
 mongoose
         .connect(process.env.DATABASE_STRING as string)
@@ -17,6 +18,10 @@ app.use(cors())
 //     res.json({message:"Hello world"})
 // })
 
+
+app.get("/health", async (req:Request, res:Response)=>{
+    res.send({message:"Health OK!"})
+})
 
 app.use("/api/my/user",myUserRoute)
 
