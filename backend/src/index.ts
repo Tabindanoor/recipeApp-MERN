@@ -3,6 +3,7 @@ import cors from "cors"
 import "dotenv/config"
 import mongoose from "mongoose"
 import myUserRoute from "./routes/MyUserRoute"
+import myRestaurantRoute from "./routes/MyRestaurantRoute"
 import { Request, Response } from "express"
 import { v2 as cloudinary } from "cloudinary";
 
@@ -34,6 +35,8 @@ app.get("/health", async (req:Request, res:Response)=>{
 })
 
 app.use("/api/my/user",myUserRoute)
+app.use("/api/my/restaurant",myRestaurantRoute)
+
 
 app.listen(7000,()=>{
     console.log("listening at port 7000...")

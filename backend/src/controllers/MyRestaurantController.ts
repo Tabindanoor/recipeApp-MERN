@@ -24,14 +24,21 @@ const createMyRestaurant = async (req: Request, res: Response) => {
     //   const imageUrl = await uploadImage(req.file as Express.Multer.File);
   
       const restaurant = new Restaurant(req.body);
+      restaurant.imageUrl = uploadResponse.url;
+
     //   restaurant.imageUrl = imageUrl;
-    //   restaurant.user = new mongoose.Types.ObjectId(req.userId);
-    //   restaurant.lastUpdated = new Date();
-    //   await restaurant.save();
+      restaurant.user = new mongoose.Types.ObjectId(req.userId);
+      restaurant.lastUpdated = new Date();
+      await restaurant.save();
   
-    //   res.status(201).send(restaurant);
+      res.status(201).send(restaurant);
     } catch (error) {
       console.log(error);
       res.status(500).json({ message: "Something went wrong" });
     }
   };
+
+
+  export default {
+    createMyRestaurant,
+  }
