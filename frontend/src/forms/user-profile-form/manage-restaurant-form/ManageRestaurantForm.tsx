@@ -4,6 +4,12 @@ import React from 'react'
 import { useForm } from 'react-hook-form';
 import {z} from "zod"
 import DetailsSection from './DetailsSection';
+import { Separator } from '@/components/ui/separator';
+import CousinesSection from './CousinesSection';
+import MenuSection from './MenuSection';
+import ImageSection from './ImageSection';
+import LoadingButton from '@/components/LoadingButton';
+import { Button } from '@/components/ui/button';
 
 const formSchema = z
   .object({
@@ -63,8 +69,8 @@ const ManageRestaurantForm = ({onSave, isLoading}:Props) => {
     const onSubmit=(formDataJson:RestaurantFormData)=>{
 
       //  to convert formDataJson to new formData object
-
-
+      const formData = new FormData();
+      formData.append(formDataJson);
     }
 
 
@@ -75,6 +81,15 @@ const ManageRestaurantForm = ({onSave, isLoading}:Props) => {
       >
 
       <DetailsSection/>
+      <Separator/>
+      <CousinesSection/>
+      <Separator/>
+      <MenuSection />
+      <Separator/>
+      <ImageSection/>
+
+      {isLoading ? <LoadingButton/> : <Button 
+      type='submit'>Submit</Button>}
 
       </form>
     </Form>
