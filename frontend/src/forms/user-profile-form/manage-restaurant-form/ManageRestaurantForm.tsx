@@ -99,7 +99,7 @@ const ManageRestaurantForm = ({onSave, isLoading}:Props) => {
     }
 
     onSave(formData);
-    }
+    };
 
 
   return (
