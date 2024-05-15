@@ -1,3 +1,4 @@
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import React from 'react'
@@ -22,14 +23,14 @@ const ImageSection = () => {
 
       <div className="flex flex-col gap-8 md:w-[50%]">
         
-        {/* {existingImageUrl && (
+        {existingImageUrl && (
           <AspectRatio ratio={16 / 9}>
             <img
               src={existingImageUrl}
               className="rounded-md object-cover h-full w-full"
             />
           </AspectRatio>
-        )} */}
+        )}
 
         <FormField
           control={control}
