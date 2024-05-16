@@ -54,6 +54,7 @@ const createMyRestaurant = async (req: Request, res: Response) => {
     }
   };
 
+  const updateMyRestaurant = async 
 
   export default {
     getMyRestaurant,
