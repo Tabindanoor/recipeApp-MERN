@@ -37,6 +37,8 @@ const searchRestaurant = async(req:Request, res:Response)=>{
 
         const pageSize = 10;
         const skip = (page-1 ) * pageSize;
+
+        // sortOption = "lastUpdated"
         const restautants = await Restaurant.find(query)
             .sort({[sortOption]:1})
             .skip(skip)
@@ -50,7 +52,8 @@ const searchRestaurant = async(req:Request, res:Response)=>{
                 pagination: {
                     total,
                     page,
-                    pages:Math.ceil(total/pageSize),
+                    pages:Math.ceil(total/pageSize),  
+                // 5o results , pageSize = 10 > pages
                     
                 }
             }
