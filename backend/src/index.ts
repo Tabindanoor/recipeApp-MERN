@@ -6,6 +6,7 @@ import myUserRoute from "./routes/MyUserRoute"
 import myRestaurantRoute from "./routes/MyRestaurantRoute"
 import { Request, Response } from "express"
 import { v2 as cloudinary } from "cloudinary";
+import restaurantRoute from "./routes/RestaurantRoute"
 
 mongoose
         .connect(process.env.DATABASE_STRING as string)
@@ -36,6 +37,7 @@ app.get("/health", async (req:Request, res:Response)=>{
 
 app.use("/api/my/user",myUserRoute)
 app.use("/api/my/restaurant",myRestaurantRoute)
+app.use("/api/restaurant", restaurantRoute)
 
 
 app.listen(7000,()=>{

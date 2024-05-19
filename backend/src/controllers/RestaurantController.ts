@@ -55,12 +55,20 @@ const searchRestaurant = async(req:Request, res:Response)=>{
                     pages:Math.ceil(total/pageSize),  
                 // 5o results , pageSize = 10 > pages
                     
-                }
-            }
+                },
+            };
+
+            res.json(response)
 
     } catch (error) {
        console.log(error);
        res.status(500).json({message:"something went wrong"});
 
     }
+ };
+
+ export default{
+
+    searchRestaurant,
+    
  }
