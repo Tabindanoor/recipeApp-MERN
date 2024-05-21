@@ -1,11 +1,14 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const SearchPage = () => {
+  const {city } = useParams();
+
   return (
-    <div>
-      
-    </div>
+    <span>
+      User searched for {city}
+    </span>
   )
 }
 
-export default SearchPage
+export default SearchPage  
