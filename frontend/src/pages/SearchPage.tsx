@@ -1,28 +1,3 @@
-// import { useSearchRestaurants } from '@/api/RestaurantApi';
-// import React from 'react'
-// import { useParams } from 'react-router-dom'
-
-// const SearchPage = () => {
-//   const {city } = useParams();
-//   const {results}= useSearchRestaurants(city)
-
-//   return (
-//     <span>
-//       User searched for {city}
-//       <span>
-//         {results?.data.map((restaurant)=><span>
-//           found - {restaurant.restaurantName},
-//           {restaurant.city},
-//               </span>)}
-
-//       </span>
-//     </span>
-//   )
-// }
-
-// export default SearchPage  
-
-
 import { useSearchRestaurants } from "@/api/RestaurantApi";
 import CuisineFilter from "@/components/CuisineFilter";
 import PaginationSelector from "@/components/PaginationSelector";
@@ -103,14 +78,14 @@ const SearchPage = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-5">
       <div id="cuisines-list">
-        {/* <CuisineFilter
+        <CuisineFilter
           selectedCuisines={searchState.selectedCuisines}
           onChange={setSelectedCuisines}
           isExpanded={isExpanded}
           onExpandedClick={() =>
             setIsExpanded((prevIsExpanded) => !prevIsExpanded)
           }
-        /> */}
+        />
       </div>
       <div id="main-content" className="flex flex-col gap-5">
         <SearchBar
@@ -130,11 +105,11 @@ const SearchPage = () => {
         {results.data.map((restaurant) => (
           <SearchResultCard restaurant={restaurant} />
         ))}
-        {/* <PaginationSelector
+        <PaginationSelector
           page={results.pagination.page}
           pages={results.pagination.pages}
           onPageChange={setPage}
-        /> */}
+        />
       </div>
     </div>
   );
