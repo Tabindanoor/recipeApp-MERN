@@ -1,7 +1,6 @@
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import React from 'react'
 import { useFormContext } from 'react-hook-form';
 
 const ImageSection = () => {

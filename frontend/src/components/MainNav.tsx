@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button } from './ui/button'
 import { useAuth0 } from '@auth0/auth0-react'
 import UsernameMenu from './UsernameMenu'
