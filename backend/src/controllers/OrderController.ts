@@ -99,7 +99,7 @@ const createCheckoutSession = async (req: Request, res: Response) => {
       restaurant._id.toString()
     );
 
-    
+
     if (!session.url) {
       return res.status(500).json({ message: "Error creating stripe session" });
     }
