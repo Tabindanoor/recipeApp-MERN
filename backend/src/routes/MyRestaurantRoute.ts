@@ -14,6 +14,9 @@ const upload = multer({
     }
 })
 
+router.get("/order", jwtCheck, jwtParse, MyRestaurantController.getMyRestaurantOrders);
+
+
 // getting myRestaurant API
 router.get("/", jwtCheck, jwtParse, MyRestaurantController.getMyRestaurant);
 
