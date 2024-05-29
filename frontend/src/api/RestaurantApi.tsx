@@ -82,6 +82,7 @@ export const useSearchRestaurants = (
     params.set("sortOption", searchState.sortOption);
 
     const response = await fetch(
+      // getting the ur of the restaurant there we can add any api
       `${API_BASE_URL}/api/restaurant/search/${city}?${params.toString()}`
     );
 
