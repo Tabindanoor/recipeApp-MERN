@@ -86,8 +86,10 @@ export const useSearchRestaurants = (
       `${API_BASE_URL}/api/restaurant/search/${city}?${params.toString()}`
     );
 
+    // if response not ok 
     if (!response.ok) {
       throw new Error("Failed to get restaurant");
+
     }
 
     return response.json();
