@@ -16,6 +16,7 @@ const OrderStatusPage = () => {
 
   return (
     <div className="space-y-10">
+      {/* something wrong */}
       {orders.map((order) => (
         <div className="space-y-10 bg-gray-50 p-10 rounded-lg">
           <OrderStatusHeader order={order} />
