@@ -2,6 +2,7 @@ import landing from "../assets/landing.png"
 import appDownload from "../assets/appDownload.png"
 import SearchBar, { SearchForm } from "@/components/SearchBar"
 import { useNavigate } from "react-router-dom"
+import Carousal from "@/components/Carousal"
 const HomePage = () => {
 
     const navigate = useNavigate();
@@ -38,6 +39,8 @@ const HomePage = () => {
 
         </div>
 
+
+    <Carousal/>
 
     </div>
   )
