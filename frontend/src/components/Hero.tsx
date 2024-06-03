@@ -51,7 +51,7 @@ const myImages = [
   return (
     <div >
         <img src={hero} alt="" className='object-cover w-full min-h[600px]' />
-        {/* <SwipeCarousel/> */}
+        <SwipeCarousel/>
         {/* <div className="flex justify-center w-full">
       <Carousel
         opts={{
