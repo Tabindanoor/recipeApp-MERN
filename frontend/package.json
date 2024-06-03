@@ -30,6 +30,7 @@
     "lucide-react": "^0.372.0",
     "next-themes": "^0.3.0",
     "react": "^18.2.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.3",
     "react-query": "^3.39.3",

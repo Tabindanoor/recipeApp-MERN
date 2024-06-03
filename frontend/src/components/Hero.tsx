@@ -49,35 +49,25 @@ const myImages = [
 ];
 
   return (
-    <div >
-        <img src={hero} alt="" className='object-cover w-full min-h[600px]' />
-        <SwipeCarousel/>
-        {/* <div className="flex justify-center w-full">
-      <Carousel
-        opts={{
-          align: "start",
-        }}
-        className="w-full max-w-sm md:max-w-xl"
-      >
-        <CarouselContent>
-          {myImages.map((image, index) => (
-            <CarouselItem key={index} className="basis-full">
-              <div className="p-1">
-                <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <img src={image} alt={`Carousel item ${index + 1}`} className="w-full h-full object-cover" />
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div> */}
+    <div>
+
+    <div className="relative mx-auto">
+    <img src={hero} alt="" className='object-cover w-full min-h[600px]' />
+    <div className="absolute inset-0 rounded-md"></div>
+    <div className="absolute top-24 left-10 flex flex-col items-start space-y-4">
+      <h2 className="text-white xl:text-8xl font-bold leading-[100px]">Order your <br /> favourite food here..!</h2>
+      <p className="text-white text-xl font-semibold ">Delicious food delivered to your door. Choose from a diverse menu featuring a delectable <br /> array of dishes crafted with the finest ingredients and culiniary expertise. <br /> Our mission is to satisfy your cravings and elevate your dining experience, <br />one delicios meal at a time.  </p>
+      <button className="px-6 text-xl py-2 bg-orange-900 border-white border-2  text-white rounded-2xl">Order Now</button>
     </div>
+  </div>
+          {/* <img src={hero} alt="" className='object-cover w-full min-h[600px]' /> */}
+
+  </div>
+
   )
 }
 
 export default Hero
+
+
+
