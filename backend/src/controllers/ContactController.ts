@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 
 const createContact = async (req: Request, res: Response) => {
   try {
-    const { customerName, customerEmail, customerPhone, orderNumber, customerNote, spamProtection } = req.body;
+    const { customerName, customerEmail, customerPhone, customerNote, spamProtection } = req.body;
 
     // Simple validation
     if (spamProtection.toLowerCase() !== 'july 10th' && spamProtection.toLowerCase() !== 'july 10') {
@@ -14,7 +14,7 @@ const createContact = async (req: Request, res: Response) => {
       customerName,
       customerEmail,
       customerPhone,
-      orderNumber,
+      // orderNumber,
       customerNote,
       spamProtection
     });

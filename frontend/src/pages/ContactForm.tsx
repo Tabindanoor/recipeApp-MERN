@@ -51,12 +51,14 @@ const ContactForm = () => {
   };
 
   return (
-    <div>
+    <div className='contact'>
       <ToastContainer />
       <div className="contact-us">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="customerName">NAME <em>&#x2a;</em></label>
-          <input
+          <label htmlFor="customerName"  className='labelInputTextArea'>NAME <em>&#x2a;</em></label>
+          <input 
+
+           className='labelInputTextArea input inputTextArea'
             id="customerName"
             name="customerName"
             required
@@ -65,8 +67,10 @@ const ContactForm = () => {
             onChange={handleChange}
           />
 
-          <label htmlFor="customerEmail">EMAIL <em>&#x2a;</em></label>
-          <input
+          <label htmlFor="customerEmail" className='labelInputTextArea'>EMAIL <em>&#x2a;</em></label>
+          <input 
+
+           className='labelInputTextArea input inputTextArea'
             id="customerEmail"
             name="customerEmail"
             required
@@ -75,10 +79,13 @@ const ContactForm = () => {
             onChange={handleChange}
           />
 
-          <label htmlFor="customerPhone">PHONE</label>
-          <input
+          <label htmlFor="customerPhone"
+           className='labelInputTextArea '>PHONE</label>
+          <input 
+
             id="customerPhone"
             name="customerPhone"
+            className='labelInputTextArea input inputTextArea'
             pattern='^(\+92[0-9]{10}|[0-9]{4}-[0-9]{7})$'
             placeholder='0305-5734382 or +923055734382'
             type="tel"
@@ -86,17 +93,20 @@ const ContactForm = () => {
             onChange={handleChange}
           />
 
-          <label htmlFor="orderNumber">ORDER NUMBER</label>
-          <input
+          {/* <label htmlFor="orderNumber">ORDER NUMBER</label>
+          <input 
+
             id="orderNumber"
             name="orderNumber"
             type="text"
             value={formData.orderNumber}
             onChange={handleChange}
-          />
+          /> */}
 
-          <label htmlFor="customerNote">YOUR MESSAGE <em>&#x2a;</em></label>
+          <label htmlFor="customerNote"  className='labelInputTextArea'>YOUR MESSAGE <em>&#x2a;</em></label>
           <textarea
+
+           className='labelInputTextArea inputTextArea'
             id="customerNote"
             name="customerNote"
             required
@@ -105,15 +115,17 @@ const ContactForm = () => {
             onChange={handleChange}
           ></textarea>
 
-          <h3>
+          <h3 className='h3'>
             Please provide all the information about your issue you can.
           </h3>
 
-          <label htmlFor="spamProtection">
+          <label htmlFor="spamProtection"  className='labelInputTextArea'>
             SPAM PROTECTION <em>&#x2a; </em>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;What day comes before July 11th?</span>
+            <span className='span'>&nbsp;&nbsp;&nbsp;&nbsp;What day comes before July 11th?</span>
           </label>
-          <input
+          <input 
+
+           className='labelInputTextArea inputTextArea input'
             id="spamProtection"
             name="spamProtection"
             type="text"

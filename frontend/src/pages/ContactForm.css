@@ -4,7 +4,7 @@
   padding: 0;
 } */
 
-body {
+.contact {
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2044837-jpeg.jpg") center center no-repeat;
   background-size: cover;
   width: 100vw;
@@ -23,19 +23,19 @@ body {
   border-top: 10px solid #f45702;
 }
 
-label, input, textarea {
+.labelInputTextArea{
   display: block;
   width: 100%;
   font-size: 12pt;
-  line-height: 24pt;
+  line-height: 20pt;
   font-family: "Spartan";
 }
 
-input {
+.input {
   margin-bottom: 24pt;
 }
 
-h3 {
+.h3 {
   font-weight: normal;
   font-size: 10pt;
   line-height: 24pt;
@@ -43,7 +43,7 @@ h3 {
   margin: 0 0 0.5em 0;
 }
 
-span {
+.span {
   font-size: 8pt;
 }
 
@@ -52,7 +52,7 @@ em {
   font-weight: bold;
 }
 
-input, textarea {
+.inputTextArea {
   border: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
@@ -65,11 +65,11 @@ input:focus, textarea:focus {
   border: 1px solid #6bd4b1;
 }
 
-textarea {
+#customerNote {
   resize: none;
 }
 
-button {
+#customerOrder {
   display: block;
   float: right;
   line-height: 24pt;
@@ -82,7 +82,7 @@ button {
   border-bottom: 2px solid transparent;
   outline: none;
 }
-button:hover {
+#customerOrder:hover {
   background: inherit;
   color: #f45702;
   border-bottom: 2px solid #f45702;

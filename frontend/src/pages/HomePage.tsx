@@ -92,23 +92,33 @@ const Accordion = ({ question, answer, isOpen, onClick }) => {
     );
   };
 
+
+
+
+ 
+
+
+
+  
+  
+
     const Questions=[
         {
-            question:"Lorem ipsum dolor sit amet",
-            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor"
+            question:"  How do I place an order?            ",
+            answer:"You can browse the menu, select your favorite dishes, and add them to your cart. Once you’re ready, proceed to checkout and follow the prompts to complete your order. "
         },
         {
-            question:"Consectetur adipiscing elit, sed do ",
-            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor"
+            question:"What payment methods do you accept? ",
+            answer:"We accept various payment methods, including credit/debit cards, PayPal, and online payment options like Stripe. You can also choose to pay cash on delivery if available. "
         },{
-            question:"Eiusmod tempos Lorem ipsum",
-            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor"
+            question:"Can I schedule an order for later?",
+            answer:" Yes, you can schedule orders for a later time or date during the checkout process. Simply select your preferred delivery time, and we’ll ensure your food arrives fresh and on time."
         },{
-            question:"Lorem ipsum dolor sit amet",
-            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor"
+            question:" What if I have an issue with my order?",
+            answer:"If you encounter any issues with your order, please contact our customer support team immediately through the app or website. We are committed to resolving any problems promptly to ensure your satisfaction."
         },{
-            question:"Lorem ipsum dolor sit amet",
-            answer:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor"
+            question:"Can I customize my order?",
+            answer:" Yes, you can customize your order by adding special instructions or selecting specific preferences for your dishes during the ordering process. Our kitchen will do its best to accommodate your requests."
         },
     ]
 const HomePage = () => {
@@ -143,13 +153,6 @@ const HomePage = () => {
     <img src={steps} alt="" />
 
        
-      <ContactForm/>
-        
-
-
-
-
-
     <Example/>
 
 
