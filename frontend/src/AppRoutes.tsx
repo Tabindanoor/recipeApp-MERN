@@ -36,11 +36,7 @@ const AppRoutes = () => {
                 < DetailPage/>
               </Layout>} />
          
-
-
-         
          <Route element={<ProtectedRoute/>}>
-
 
 
          <Route 
@@ -71,18 +67,7 @@ const AppRoutes = () => {
             </Layout>
           }
          />
-          
-
          </Route>
-{/* 
-        <Route 
-            path='/user-profile'  
-            element={
-            <Layout>
-              <UserProfilePage/>
-            </Layout>
-          }
-         /> */}
 
 
         <Route path='*'  element={<Navigate  to="/"/>} />

@@ -1,16 +1,8 @@
+
+
 import express from 'express';
-import ContactController  from '../controllers/ContactController';
-import { jwtCheck } from '../middleware/auth';
+import ContactController from '../controllers/ContactController';
 
 const router = express.Router();
-
-// Define the route to handle form submission
-
-router.put(
-    "/" ,
-    jwtCheck,
-    ContactController.createContact)
-
-
+router.post('/', ContactController.createContact);
 export default router;
- 

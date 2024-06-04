@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import  { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./ContactForm.css";
@@ -78,7 +79,6 @@ const ContactForm = () => {
           <input
             id="customerPhone"
             name="customerPhone"
-            // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             pattern='^(\+92[0-9]{10}|[0-9]{4}-[0-9]{7})$'
             placeholder='0305-5734382 or +923055734382'
             type="tel"
@@ -129,3 +129,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
