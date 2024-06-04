@@ -8,6 +8,7 @@ import ManageRestaurantPage from './pages/ManageRestaurantPage';
 import SearchPage from './pages/SearchPage';
 import DetailPage from './pages/DetailPage';
 import OrderStatusPage from './pages/OrderStatusPage';
+import ContactForm from './pages/ContactForm';
 
 const AppRoutes = () => {
   return (
@@ -19,6 +20,9 @@ const AppRoutes = () => {
          />
         <Route path='/auth-callback'  element={<AuthCallbackPage/>} />
         
+        <Route path='/contact'  element={<ContactForm/>} />
+
+
         <Route path='/search/:city' 
                element={
                <Layout showHero={false}>

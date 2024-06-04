@@ -36,14 +36,7 @@ const ManageRestaurantPage = () => {
         />
       </TabsContent>
     </Tabs>
-  // <ManageRestaurantForm
-  //         restaurant={restaurant}
-  //         onSave={isEditing ? updateRestaurant : createRestaurant}
-
-  //         isLoading={isCreateLoading || isUpdateLoading}
-          
-
-  //         />
+  
         )
 }
 

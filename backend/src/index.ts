@@ -8,6 +8,8 @@ import { Request, Response } from "express"
 import { v2 as cloudinary } from "cloudinary";
 import restaurantRoute from "./routes/RestaurantRoute"
 import orderRoute from "./routes/OrderRoute"
+import contactRoutes from './routes/ContactRoutes';
+
 mongoose
         .connect(process.env.DATABASE_STRING as string)
         .then(()=>{console.log("Connected to the database!")
@@ -35,6 +37,9 @@ app.use("/api/my/user",myUserRoute)
 app.use("/api/my/restaurant",myRestaurantRoute)
 app.use("/api/restaurant", restaurantRoute)
 app.use("/api/order", orderRoute)
+
+
+app.use('/api/contact', contactRoutes);
 
 
 app.listen(7000,()=>{

@@ -55,7 +55,7 @@ export const Example = () => {
        
       ]}
     >
-      <section className="grid h-screen w-full place-content-center bg-white">
+      <section className="grid h-screen w-full place-content-center bg-orange-500">
         <p className="flex items-center gap-2 text-3xl font-bold uppercase text-black">
           {/* <FiMousePointer /> */}
           <span>Hover to see customer's Review</span>

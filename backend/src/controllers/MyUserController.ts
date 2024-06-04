@@ -2,7 +2,6 @@ import {Request, Response} from 'express';
 import User from '../models/user';
 
 
-
 const getCurrentUser = async (req: Request, res:Response)=>{
     
     try{
@@ -14,7 +13,6 @@ const getCurrentUser = async (req: Request, res:Response)=>{
 
         res.json(currentUser)
     }
-
 
     catch(error){
         console.log(error)
@@ -80,7 +78,7 @@ const updateCurrentUser=async(req:Request, res:Response)=> {
 
 
 export default {
-    getCurrentUser,
+    getCurrentUser, 
     createCurrentUser,
     updateCurrentUser,
 

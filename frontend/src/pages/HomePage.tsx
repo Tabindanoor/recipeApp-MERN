@@ -7,6 +7,7 @@ import StatsSection from "@/components/StatsSection"
 import steps from "../assets/steps.png"
 import { useState } from "react"
 import { Example } from "@/components/Example"
+import ContactForm from "./ContactForm"
 
 // const Accordion = ({question, answer}) => {
 //     const [isOpen, setIsOpen] = useState(false);
@@ -141,21 +142,18 @@ const HomePage = () => {
     <StatsSection/>
     <img src={steps} alt="" />
 
-        <div className='grid  md:grid-cols-2 gap-5'>
-            <img src={landing} alt="" />
-
-            <div className='flex flex-col items-center text-center justify-center gap-4'>
-                <span className='text-3xl  tracking-tighter font-bold'>
-                    Order Takeway Even Faster 
-                </span>
-                <span>Download the MERN Eats App  and enjoy ordering food in seconds.</span>
-                <img src={appDownload} alt="" />
-            </div>
-
-        </div>
-
+       
+      <ContactForm/>
         
-        <div className=" mx-8 mt-20 lg:mx-20 p-4">
+
+
+
+
+
+    <Example/>
+
+
+    <div className=" mx-8  lg:mx-20 p-4">
         <h1 className='text-center  text-xl sm:text-2xl  mx-12 md:mx-0  mt-[77px] lg:text-4xl font-semibold'>Frequently asked Questions</h1> 
 
      {Questions.map((question, index) => (
@@ -170,11 +168,20 @@ const HomePage = () => {
     </div>
 
 
-
-
-
-    <Example/>
     <Carousal/>
+    <div className='grid  md:grid-cols-2 gap-5'>
+            <img src={landing} alt="" />
+
+            <div className='flex flex-col items-center text-center justify-center gap-4'>
+                <span className='text-3xl  tracking-tighter font-bold'>
+                    Order Takeway Even Faster 
+                </span>
+                <span>Download the MERN Eats App  and enjoy ordering food in seconds.</span>
+                <img src={appDownload} alt="" />
+            </div>
+
+        </div>
+
     {/* <StatsSection/> */}
 
     </div>
