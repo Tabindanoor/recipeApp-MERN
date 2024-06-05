@@ -26,32 +26,32 @@ import rpiza from '../assets/rpiza.png'
 
 export const Example = () => {
   
-  const myImages = [
+  // const myImages = [
  
-    rpiza,
-    pizza,
-    rbbq,
-    msala,
-    rburger,
-    hero,
-    rwings,
-    wingss,
-    oburg,
-    hung,
-    burger,
-    rnoodle,
-    steak,
-    rice,
-    french,
-    rsalad,
-    stcik,
-    rtik,
-    steak,
-    order,
-    noodles,
-    chinese, 
-    download
-  ];
+  //   rpiza,
+  //   pizza,
+  //   rbbq,
+  //   msala,
+  //   rburger,
+  //   hero,
+  //   rwings,
+  //   wingss,
+  //   oburg,
+  //   hung,
+  //   burger,
+  //   rnoodle,
+  //   steak,
+  //   rice,
+  //   french,
+  //   rsalad,
+  //   stcik,
+  //   rtik,
+  //   steak,
+  //   order,
+  //   noodles,
+  //   chinese, 
+  //   download
+  // ];
   
   return (
     <MouseImageTrail
@@ -63,7 +63,6 @@ export const Example = () => {
     rbbq,
     msala,
     rburger,
-    // hero,
     rwings,
     wingss,
     oburg,
