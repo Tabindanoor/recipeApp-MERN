@@ -9,6 +9,28 @@ const Header = () => {
                 MERN Eats
             </Link>
 
+            {/*  ////////////////////////////////// */}
+
+
+            <div className="">
+                <Link to="/" className="text-black font-bold  " >
+                    Home
+                </Link>
+            </div>
+
+            <div className="">
+                <Link to="/contact" className="text-black font-bold  " >
+                    Feedback
+                </Link>
+            </div>
+
+            <div className="">
+                <a href="#contact" className="text-black font-bold  " >
+                    Contact
+                </a>
+            </div>
+
+            {/* ////////////////////////////////// */}
 
             <div className="md:hidden">
               <MobileNav/>

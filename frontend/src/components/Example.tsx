@@ -1,7 +1,5 @@
 import { useAnimate } from "framer-motion";
-import React, { useRef } from "react";
-// import { FiMousePointer } from "react-icons/fi";
-
+import  { useRef } from "react";
 import hero from '../assets/hero.png'
 import hung from '../assets/hung.png'
 import chinese from '../assets/chinese.png'
@@ -16,26 +14,43 @@ import pizza from '../assets/pizza.png'
 import steak from '../assets/steak.png'
 import msala from '../assets/msala.png'
 import oburg from '../assets/oburg.png'
+import rbbq from '../assets/rbbq.png'
+import rburger from '../assets/rburger.png'
+import rice from '../assets/rice.png'
+import rnoodle from '../assets/rnoodle.png'
+import rsalad from '../assets/rsalad.png'
+import rtik from '../assets/rtik.png'
+import rwings from '../assets/rwings.png'
+import rpiza from '../assets/rpiza.png'
 
 
 export const Example = () => {
   
   const myImages = [
  
-    hero,
-    oburg,
-    // order,
-    hung,
-    // chinese,
-    // download,
-    burger,
-    // french,
-    // noodles,
-    // stcik,
-    wingss, 
+    rpiza,
     pizza,
+    rbbq,
+    msala,
+    rburger,
+    hero,
+    rwings,
+    wingss,
+    oburg,
+    hung,
+    burger,
+    rnoodle,
     steak,
-    msala
+    rice,
+    french,
+    rsalad,
+    stcik,
+    rtik,
+    steak,
+    order,
+    noodles,
+    chinese, 
+    download
   ];
   
   return (
@@ -43,15 +58,29 @@ export const Example = () => {
       renderImageBuffer={50}
       rotationRange={25}
       images={[
-        hero,
-        oburg,
-        hung,
-        burger,
-        wingss,
-        pizza,
-        steak,
-        hero,
-        msala,
+        rpiza,
+    pizza,
+    rbbq,
+    msala,
+    rburger,
+    // hero,
+    rwings,
+    wingss,
+    oburg,
+    hung,
+    burger,
+    rnoodle,
+    steak,
+    rice,
+    french,
+    rsalad,
+    stcik,
+    rtik,
+    steak,
+    order,
+    noodles,
+    chinese, 
+    download
        
       ]}
     >

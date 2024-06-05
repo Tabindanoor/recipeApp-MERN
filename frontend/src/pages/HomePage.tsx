@@ -7,51 +7,7 @@ import StatsSection from "@/components/StatsSection"
 import steps from "../assets/steps.png"
 import { useState } from "react"
 import { Example } from "@/components/Example"
-import ContactForm from "./ContactForm"
 
-// const Accordion = ({question, answer}) => {
-//     const [isOpen, setIsOpen] = useState(false);
-  
-//     const toggleAccordion = () => {
-//       setIsOpen(!isOpen);
-//     };
-//     return (
-//         <div className="border-b border-gray-300 rounded mb-4">
-//       <div
-//         className="flex items-center justify-between py-4 cursor-pointer"
-//         onClick={toggleAccordion}
-//       >
-//         <div className="flex">
-//           <div className="w-5 h-5 bg-orange-600  bg-opacity-50 rounded-full mr-5 "></div>
-//           <h2 className="text-lg font-semibold">{question}</h2>
-//         </div>
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           viewBox="0 0 24 24"
-//           fill="none"
-//           stroke="currentColor"
-//           strokeWidth="2"
-//           strokeLinecap="round"
-//           strokeLinejoin="round"
-//           className={`w-6 h-6 transition-transform ${
-//             isOpen ? 'rotate-180' : 'rotate-0'
-//           }`}
-//         >
-//           {isOpen ? (
-//             <path d="M18 15L12 9L6 15" />
-//           ) : (
-//             <path d="M6 9L12 15L18 9" />
-//           )}
-//         </svg>
-//       </div>
-//       {isOpen && (
-//         <div className="p-4">
-//           <p className='text-[#696984]  text-sm'>{answer}</p>
-//         </div>
-//       )}
-//     </div>
-//       );
-//     };
 
 const Accordion = ({ question, answer, isOpen, onClick }) => {
     return (
@@ -92,15 +48,6 @@ const Accordion = ({ question, answer, isOpen, onClick }) => {
     );
   };
 
-
-
-
- 
-
-
-
-  
-  
 
     const Questions=[
         {
