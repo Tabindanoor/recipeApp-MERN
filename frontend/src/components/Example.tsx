@@ -1,6 +1,5 @@
 import { useAnimate } from "framer-motion";
 import  { useRef } from "react";
-import hero from '../assets/hero.png'
 import hung from '../assets/hung.png'
 import chinese from '../assets/chinese.png'
 import download from '../assets/download.png'
@@ -26,32 +25,6 @@ import rpiza from '../assets/rpiza.png'
 
 export const Example = () => {
   
-  // const myImages = [
- 
-  //   rpiza,
-  //   pizza,
-  //   rbbq,
-  //   msala,
-  //   rburger,
-  //   hero,
-  //   rwings,
-  //   wingss,
-  //   oburg,
-  //   hung,
-  //   burger,
-  //   rnoodle,
-  //   steak,
-  //   rice,
-  //   french,
-  //   rsalad,
-  //   stcik,
-  //   rtik,
-  //   steak,
-  //   order,
-  //   noodles,
-  //   chinese, 
-  //   download
-  // ];
   
   return (
     <MouseImageTrail
