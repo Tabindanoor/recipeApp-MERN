@@ -46,26 +46,26 @@ const OrderItemCard = ({ order }: Props) => {
   };
 
   return (
-    <Card>
+    <Card className="">
       <CardHeader>
         <CardTitle className="grid md:grid-cols-4 gap-4 justify-between mb-3">
-          <div>
+          <div className="text-xl" >
             Customer Name:
             <span className="ml-2 font-normal">
               {order.deliveryDetails.name}
             </span>
           </div>
-          <div>
+          <div  className="text-xl">
             Delivery address:
             <span className="ml-2 font-normal">
               {order.deliveryDetails.addressLine1}, {order.deliveryDetails.city}
             </span>
           </div>
-          <div>
+          <div  className="text-xl">
             Time:
             <span className="ml-2 font-normal">{getTime()}</span>
           </div>
-          <div>
+          <div  className="text-xl">
             Total Cost:
             <span className="ml-2 font-normal">
               Rs{(order.totalAmount / 100).toFixed(2)}

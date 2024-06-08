@@ -47,7 +47,7 @@ const OrderSummary = ({ restaurant, cartItems, removeFromCart }: Props) => {
                 size={20}
                 onClick={() => removeFromCart(item)}
               />
-              £{((item.price * item.quantity) / 100).toFixed(2)}
+              Rs{((item.price * item.quantity) / 100).toFixed(2)}
             </span>
           </div>
         ))}
