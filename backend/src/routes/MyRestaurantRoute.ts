@@ -21,8 +21,8 @@ router.get("/order", jwtCheck, jwtParse, MyRestaurantController.getMyRestaurantO
 
 // getting myRestaurant API
 router.get("/",
-    //  jwtCheck,
-    //   jwtParse, 
+     jwtCheck,
+      jwtParse, 
       MyRestaurantController.getMyRestaurant);
 
 
@@ -32,8 +32,8 @@ router.post(
     "/",
     upload.single("imageFile") ,
     validateMyRestaurantRequest,
-    // jwtCheck,
-    // jwtParse,
+    jwtCheck,
+    jwtParse,
     MyRestaurantController.createMyRestaurant
 );
 

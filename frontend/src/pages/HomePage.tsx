@@ -132,7 +132,6 @@ const HomePage = () => {
 
         </div>
 
-    {/* <StatsSection/> */}
 
     </div>
   )

@@ -7,7 +7,6 @@ const Footer = () => {
 <div className=' text-white py-14 text-base  lg:p-12  xl:pl-[65px]  xl:pr-[96px] 2xl:pl-[106px] 2xl:pr-[187px]'>
                 <div className='flex justify-between  list-none max-lg:flex-col max-lg:gap-6 text-white items-center'>
                     <div >
-                        {/* <li className='mb-6'> <img  className="alex"   alt='alex'/></li> */}
                         <p className="text-xl font-semibold ">IT Eats</p>
                         <p className='max-lg:hidden font-sans text-[#F6F6F6]'>
                         Delicious food delivered to your door.  <br /> Our mission is to satisfy your cravings and elevate your dining experience, <br />one delicios meal at a time. 

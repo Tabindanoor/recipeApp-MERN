@@ -8,9 +8,6 @@ import {
 } from "@/components/ui/carousel"
 
 import hero from '../assets/hero.png'
-import hung from '../assets/hung.png'
-import chinese from '../assets/chinese.png'
-import download from '../assets/download.png'
 import burger from '../assets/burger.png'
 import french from '../assets/french.png'
 import noodles from '../assets/noodles.png'
@@ -32,14 +29,8 @@ const Carousal = () => {
  
     hero,
     oburg,
-    // order,
     hung,
-    // chinese,
-    // download,
     burger,
-    // french,
-    // noodles,
-    // stcik,
     wingss, 
     pizza,
     steak,
@@ -50,7 +41,6 @@ const Carousal = () => {
  
   return (
     <div >
-    {/* <SwipeCarousel/> */}
     <div className="flex justify-center w-full">
   <Carousel
     opts={{
