@@ -86,7 +86,7 @@ const HomePage = () => {
     
   return (
     <div className='flex flex-col gap-12'>
-        <div className='md:px-32  flex text-center justify-center bg-white shadow-md rounded-lg py-8 flex-col gap-5 -mt-16'>
+        <div className='md:px-32  flex text-center justify-center bg-orange-100 shadow-md rounded-lg py-8 flex-col gap-5 -mt-16'>
         <h1 className='font-bold text-orange-600 text-5xl tracking-tight '>
             Tuck into Takeway Today
         </h1>
@@ -96,8 +96,8 @@ const HomePage = () => {
                     onSubmit={handleSearchSubmit}/>
         </div>
 
-    <StatsSection/>
     <img src={steps} alt="" />
+    <StatsSection/>
 
        
     <Example/>
