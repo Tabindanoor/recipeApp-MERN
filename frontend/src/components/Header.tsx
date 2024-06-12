@@ -9,7 +9,6 @@ const Header = () => {
                 IT Eats
             </Link>
 
-            {/*  ////////////////////////////////// */}
 
 
             <div className="">
@@ -30,7 +29,6 @@ const Header = () => {
                 </a>
             </div>
 
-            {/* ////////////////////////////////// */}
 
             <div className="md:hidden">
               <MobileNav/>
