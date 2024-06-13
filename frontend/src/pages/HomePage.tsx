@@ -18,7 +18,7 @@ const Accordion = ({ question, answer, isOpen, onClick }) => {
         >
           <div className="flex">
             <div className="w-5 h-5 bg-orange-600 bg-opacity-50 rounded-full mr-5"></div>
-            <h2 className="text-lg font-semibold">{question}</h2>
+            <h2 className="text-xl font-semibold">{question}</h2>
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ const Accordion = ({ question, answer, isOpen, onClick }) => {
         </div>
         {isOpen && (
           <div className="p-4">
-            <p className="text-[#696984] text-sm">{answer}</p>
+            <p className="text-[#696984] text-lg ">{answer}</p>
           </div>
         )}
       </div>
@@ -104,7 +104,7 @@ const HomePage = () => {
 
 
     <div className=" mx-8  lg:mx-20 p-4">
-        <h1 className='text-center  text-xl sm:text-2xl  mx-12 md:mx-0  mt-[77px] lg:text-4xl font-semibold'>Frequently asked Questions</h1> 
+        <h1 className='text-center  text-xl sm:text-2xl  mx-12 md:mx-0  lg:text-4xl font-semibold'>Frequently asked Questions</h1> 
 
      {Questions.map((question, index) => (
         <Accordion

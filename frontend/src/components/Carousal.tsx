@@ -39,7 +39,10 @@ const Carousal = () => {
   return (
     <div >
     {/* <SwipeCarousel/> */}
+    <h1 className='text-center  text-xl sm:text-2xl  mx-12 md:mx-0  lg:text-4xl font-semibold'>Our Most demanded Items</h1> 
+<br />
     <div className="flex justify-center w-full">
+
   <Carousel
     opts={{
       align: "start",
