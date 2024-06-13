@@ -173,31 +173,36 @@
 //     </div>
 //   );
 // };
-
-
+import React, { useRef } from "react";
 import { useAnimate } from "framer-motion";
-import { useRef } from "react";
-import hung from '../assets/hung.png';
-import chinese from '../assets/chinese.png';
-import download from '../assets/download.png';
-import burger from '../assets/burger.png';
-import french from '../assets/french.png';
-import noodles from '../assets/noodles.png';
-import stcik from '../assets/sticks.png';
-import order from '../assets/order.png';
-import wingss from '../assets/wingss.png';
-import pizza from '../assets/pizza.png';
-import steak from '../assets/steak.png';
-import msala from '../assets/msala.png';
-import oburg from '../assets/oburg.png';
+// import hung from '../assets/hung.png';
+// import chinese from '../assets/chinese.png';
+// import download from '../assets/download.png';
+// import burger from '../assets/burger.png';
+// import french from '../assets/french.png';
+// import noodles from '../assets/noodles.png';
+// import stcik from '../assets/sticks.png';
+// import order from '../assets/order.png';
+// import wingss from '../assets/wingss.png';
+// import pizza from '../assets/pizza.png';
+// import steak from '../assets/steak.png';
+// import msala from '../assets/msala.png';
+// import oburg from '../assets/oburg.png';
 import rbbq from '../assets/rbbq.png';
 import rburger from '../assets/rburger.png';
-import rice from '../assets/rice.png';
+// import rice from '../assets/rice.png';
 import rnoodle from '../assets/rnoodle.png';
 import rsalad from '../assets/rsalad.png';
 import rtik from '../assets/rtik.png';
 import rwings from '../assets/rwings.png';
 import rpiza from '../assets/rpiza.png';
+
+type MouseImageTrailProps = {
+  children: React.ReactNode;
+  images: string[];
+  renderImageBuffer: number;
+  rotationRange: number;
+};
 
 export const Example = () => {
   return (
@@ -228,13 +233,13 @@ const MouseImageTrail = ({
   images,
   renderImageBuffer,
   rotationRange,
-}) => {
+}: MouseImageTrailProps) => {
   const [scope, animate] = useAnimate();
   const lastRenderPosition = useRef({ x: 0, y: 0 });
   const imageRenderCount = useRef(0);
   const lastImageRenderTime = useRef(Date.now());
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { clientX, clientY } = e;
     const distance = calculateDistance(
       clientX,
@@ -248,14 +253,14 @@ const MouseImageTrail = ({
       lastRenderPosition.current.y = clientY;
 
       const now = Date.now();
-      if (now - lastImageRenderTime.current >= 300) { // 2000 milliseconds = 2 seconds
+      if (now - lastImageRenderTime.current >= 300) { // 300 milliseconds
         lastImageRenderTime.current = now;
         renderNextImage();
       }
     }
   };
 
-  const calculateDistance = (x1, y1, x2, y2) => {
+  const calculateDistance = (x1: number, y1: number, x2: number, y2: number): number => {
     const deltaX = x2 - x1;
     const deltaY = y2 - y1;
     return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
@@ -264,7 +269,7 @@ const MouseImageTrail = ({
   const renderNextImage = () => {
     const imageIndex = imageRenderCount.current % images.length;
     const selector = `[data-mouse-move-index="${imageIndex}"]`;
-    const el = document.querySelector(selector);
+    const el = document.querySelector<HTMLImageElement>(selector)!;
 
     el.style.top = `${lastRenderPosition.current.y}px`;
     el.style.left = `${lastRenderPosition.current.x}px`;
